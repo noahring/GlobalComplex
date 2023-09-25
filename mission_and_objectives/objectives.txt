@@ -1,0 +1,7 @@
+1. Track checkouts of specimens.
+2. Mantain detailed information about insects. 
+3. Mantain information about people who have checked out specimins.
+4. Mantain specimen information. 
+5. Mantain researcher information. 
+6. Mantain digital information. 
+7. Mantaim information about Archive Staff. 
