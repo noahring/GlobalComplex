@@ -1,3 +1,3 @@
-The purpose of the database of the Mid America Entomological Archive
-is to mantain information collected by entomologists. The Entomological data 
+The purpose of the Mid America Entomological Archive database
+is to mantain information about specimens collected by entomologists. The Entomological data 
 will be supplied to inquirers via this database.
