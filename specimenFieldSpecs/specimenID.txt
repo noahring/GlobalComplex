@@ -2,7 +2,7 @@ FIELD SPECIFICATIONS
 
 GENERAL ELEMENTS
 
-Field Name:           _ Yes
+Field Name:           _ X
 Parent Table:         _ Specimen
 Alias(es):            _ 
 Specification Type:
@@ -20,39 +20,39 @@ Data Type:            _ int
 Length:               _ 
 Decimal Places:       _  0
 Character Support:
-  Letters (A-Z):      _ No
-  Numbers (0-9):      _ Yes
-  Keyboard (.,/$#%):  _ No
-  Special (©®™Σπ):    _ NO
+  Letters (A-Z):      _ 
+  Numbers (0-9):      _ X
+  Keyboard (.,/$#%):  _ 
+  Special (©®™Σπ):    _ 
 
 
 LOGICAL ELEMENTS
 
 Key Type:      Non:        _ 
-               Primary:    _ Yes
-               Foreign:    _ Yes
+               Primary:    _ X
+               Foreign:    _ X
                Alternate:  _ 
 
-Key Structure: Simple:     _ Yes
+Key Structure: Simple:     _ X
                Composite:  _ 
 
 Uniqueness:    Non-unique: _ 
-               Unique:     _ Yes
+               Unique:     _ X
 
 Null Support:  Nulls OK:   _ 
                No nulls:   _ 
 
 Values Entered By: User:   _ 
-                   System: _ Yes
+                   System: _ X
 
 Required Value:    No:     _ 
-                   Yes:    _ Yes
+                   Yes:    _ X
 
 Range of Values:   _ 
 
 Edit Rule:
   Enter now, edits allowed:       _ 
-  Enter now, edits not allowed:   _ Yes
+  Enter now, edits not allowed:   _ X
   Enter later, edits allowed:     _ 
   Enter later, edits not allowed: _ 
   Not determined at this time:    _ 
