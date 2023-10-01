@@ -2,38 +2,38 @@ FIELD SPECIFICATIONS
 
 GENERAL ELEMENTS
 
-Field Name:           _ speciesName 
-Parent Table:         _ species
+Field Name:           _ isAlive 
+Parent Table:         _ specimen
 Alias(es):            _ 
 Specification Type:
   Unique:  _ Yes
   Generic: _ 
   Replica: _ 
 Source Specification: _ 
-Shared By:            _ Specimins, Requests
-Description:          _ The official, classical, scientific, taxonomical species name
+Shared By:            _ Requests
+Description:          _ tells if the specimen in question is alive
 
 
 PHYSICAL ELEMENTS
 
-Data Type:            _ VAR CHAR
-Length:               _ 20
+Data Type:            _ boolean
+Length:               _ 1
 Decimal Places:       _  N/A
 Character Support:
   Letters (A-Z):      _ Yes
-  Numbers (0-9):      _ No
+  Numbers (0-9):      _ Yes
   Keyboard (.,/$#%):  _ No
   Special (©®™Σπ):    _ Yes
 
 
 LOGICAL ELEMENTS
 
-Key Type:      Non:        _ 
-               Primary:    _ Yes
-               Foreign:    _ Yes
+Key Type:      Non:        _ Yes
+               Primary:    _ 
+               Foreign:    _ 
                Alternate:  _ 
 
-Key Structure: Simple:     _ Yes
+Key Structure: Simple:     _ 
                Composite:  _ 
 
 Uniqueness:    Non-unique: _ Yes
@@ -48,11 +48,11 @@ Values Entered By: User:   _
 Required Value:    No:     _ 
                    Yes:    _ Yes
 
-Range of Values:   _ No domain limitation
+Range of Values:   _ True or False
 
 Edit Rule:
-  Enter now, edits allowed:       _ 
-  Enter now, edits not allowed:   _ Yes
+  Enter now, edits allowed:       _ Yes
+  Enter now, edits not allowed:   _ 
   Enter later, edits allowed:     _ 
   Enter later, edits not allowed: _ 
   Not determined at this time:    _ 

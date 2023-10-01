@@ -2,42 +2,42 @@ FIELD SPECIFICATIONS
 
 GENERAL ELEMENTS
 
-Field Name:           _ speciesName 
-Parent Table:         _ species
+Field Name:           _ photograph
+Parent Table:         _ specimen
 Alias(es):            _ 
 Specification Type:
   Unique:  _ Yes
   Generic: _ 
   Replica: _ 
 Source Specification: _ 
-Shared By:            _ Specimins, Requests
-Description:          _ The official, classical, scientific, taxonomical species name
+Shared By:            _ Specimins
+Description:          _ A web link to a photograph of the specimen
 
 
 PHYSICAL ELEMENTS
 
 Data Type:            _ VAR CHAR
-Length:               _ 20
+Length:               _ 40
 Decimal Places:       _  N/A
 Character Support:
   Letters (A-Z):      _ Yes
-  Numbers (0-9):      _ No
-  Keyboard (.,/$#%):  _ No
+  Numbers (0-9):      _ Yes
+  Keyboard (.,/$#%):  _ Yes
   Special (©®™Σπ):    _ Yes
 
 
 LOGICAL ELEMENTS
 
-Key Type:      Non:        _ 
-               Primary:    _ Yes
-               Foreign:    _ Yes
+Key Type:      Non:        _ Yes
+               Primary:    _ 
+               Foreign:    _ 
                Alternate:  _ 
 
-Key Structure: Simple:     _ Yes
+Key Structure: Simple:     _ 
                Composite:  _ 
 
-Uniqueness:    Non-unique: _ Yes
-               Unique:     _ 
+Uniqueness:    Non-unique: _ 
+               Unique:     _ Yes
 
 Null Support:  Nulls OK:   _ 
                No nulls:   _ Yes
