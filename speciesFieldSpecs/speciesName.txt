@@ -6,55 +6,55 @@ Field Name:           _ speciesName
 Parent Table:         _ species
 Alias(es):            _ 
 Specification Type:
-  Unique:  _ 
+  Unique:  _ Yes
   Generic: _ 
   Replica: _ 
 Source Specification: _ 
-Shared By:            _ 
-Description:          _ 
+Shared By:            _ Specimins, Requests
+Description:          _ The official, classical, scientific, taxonomical species name
 
 
 PHYSICAL ELEMENTS
 
-Data Type:            _ 
-Length:               _ 
-Decimal Places:       _  
+Data Type:            _ VAR CHAR
+Length:               _ 20
+Decimal Places:       _  N/A
 Character Support:
-  Letters (A-Z):      _ 
-  Numbers (0-9):      _ 
-  Keyboard (.,/$#%):  _ 
-  Special (©®™Σπ):    _ 
+  Letters (A-Z):      _ Yes
+  Numbers (0-9):      _ No
+  Keyboard (.,/$#%):  _ No
+  Special (©®™Σπ):    _ Yes
 
 
 LOGICAL ELEMENTS
 
 Key Type:      Non:        _ 
-               Primary:    _ 
+               Primary:    _ Yes
                Foreign:    _ 
                Alternate:  _ 
 
-Key Structure: Simple:     _ 
+Key Structure: Simple:     _ Yes
                Composite:  _ 
 
-Uniqueness:    Non-unique: _ 
+Uniqueness:    Non-unique: _ Yes
                Unique:     _ 
 
 Null Support:  Nulls OK:   _ 
-               No nulls:   _ 
+               No nulls:   _ Yes
 
 Values Entered By: User:   _ 
-                   System: _ 
+                   System: _ Yes
 
 Required Value:    No:     _ 
-                   Yes:    _ 
+                   Yes:    _ Yes
 
-Range of Values:   _ 
+Range of Values:   _ No domain limitation
 
 Edit Rule:
   Enter now, edits allowed:       _ 
-  Enter now, edits not allowed:   _ 
+  Enter now, edits not allowed:   _ Yes
   Enter later, edits allowed:     _ 
   Enter later, edits not allowed: _ 
   Not determined at this time:    _ 
 
-NOTES: _
+NOTES: _ 
