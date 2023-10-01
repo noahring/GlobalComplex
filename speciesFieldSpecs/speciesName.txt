@@ -20,39 +20,39 @@ Data Type:            _ VAR CHAR
 Length:               _ 20
 Decimal Places:       _  N/A
 Character Support:
-  Letters (A-Z):      _ Yes
-  Numbers (0-9):      _ No
-  Keyboard (.,/$#%):  _ No
-  Special (©®™Σπ):    _ Yes
+  Letters (A-Z):      _ X
+  Numbers (0-9):      _ 
+  Keyboard (.,/$#%):  _ 
+  Special (©®™Σπ):    _ X
 
 
 LOGICAL ELEMENTS
 
 Key Type:      Non:        _ 
-               Primary:    _ Yes
-               Foreign:    _ Yes
+               Primary:    _ X
+               Foreign:    _ X
                Alternate:  _ 
 
-Key Structure: Simple:     _ Yes
+Key Structure: Simple:     _ X
                Composite:  _ 
 
 Uniqueness:    Non-unique: _ 
-               Unique:     _ Yes
+               Unique:     _ X
 
 Null Support:  Nulls OK:   _ 
-               No nulls:   _ Yes
+               No nulls:   _ X
 
 Values Entered By: User:   _ 
-                   System: _ Yes
+                   System: _ X
 
 Required Value:    No:     _ 
-                   Yes:    _ Yes
+                   Yes:    _ X
 
 Range of Values:   _ No domain limitation
 
 Edit Rule:
   Enter now, edits allowed:       _ 
-  Enter now, edits not allowed:   _ Yes
+  Enter now, edits not allowed:   _ X
   Enter later, edits allowed:     _ 
   Enter later, edits not allowed: _ 
   Not determined at this time:    _ 
