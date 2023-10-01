@@ -1,0 +1,61 @@
+GENERAL ELEMENTS
+
+Field Name: QuantityRequested
+Parent Table: Requests
+Alias(es):
+Specification Type:
+Unique:
+Generic: X
+Replica:
+Source Specification:
+Shared By:
+Description: The quantity requested in the request.
+
+PHYSICAL ELEMENTS
+
+Data Type: Integer
+Length:
+Decimal Places:
+Character Support:
+Letters (A-Z):
+Numbers (0-9): X
+Keyboard (.,/$#%):
+Special (©®™Σπ):
+
+LOGICAL ELEMENTS
+
+Key Type:
+Non: X
+Primary:
+Foreign:
+Alternate:
+
+Key Structure:
+Simple: X
+Composite:
+
+Uniqueness:
+Non-unique: X
+Unique:
+
+Null Support:
+Nulls OK:
+No nulls: X
+
+Values Entered By:
+User: X
+System: 
+
+Required Value:
+No: 
+Yes: X
+
+Range of Values:
+Edit Rule:
+Enter now, edits allowed: X
+Enter now, edits not allowed:
+Enter later, edits allowed:
+Enter later, edits not allowed:
+Not determined at this time:
+
+NOTES: The quantity requested in the request.

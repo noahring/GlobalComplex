@@ -1,0 +1,61 @@
+GENERAL ELEMENTS
+
+Field Name: TransactionID
+Parent Table: Transactions
+Alias(es):
+Specification Type:
+Unique: X
+Generic: 
+Replica: 
+Source Specification:
+Shared By:
+Description: Unique identifier for each transaction.
+
+PHYSICAL ELEMENTS
+
+Data Type: Integer
+Length:
+Decimal Places:
+Character Support:
+Letters (A-Z):
+Numbers (0-9): X
+Keyboard (.,/$#%):
+Special (©®™Σπ):
+
+LOGICAL ELEMENTS
+
+Key Type:
+Non:
+Primary: X
+Foreign: X
+Alternate:
+
+Key Structure:
+Simple: X
+Composite:
+
+Uniqueness:
+Non-unique:
+Unique: X
+
+Null Support:
+Nulls OK:
+No nulls: X
+
+Values Entered By:
+User:
+System: X
+
+Required Value:
+No: 
+Yes: X
+
+Range of Values:
+Edit Rule:
+Enter now, edits allowed: X
+Enter now, edits not allowed:
+Enter later, edits allowed:
+Enter later, edits not allowed:
+Not determined at this time:
+
+NOTES: Primary key field that uniquely identifies each transaction.
