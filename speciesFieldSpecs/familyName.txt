@@ -2,7 +2,7 @@ FIELD SPECIFICATIONS
 
 GENERAL ELEMENTS
 
-Field Name:           _ speciesName 
+Field Name:           _ familyName 
 Parent Table:         _ species
 Alias(es):            _ 
 Specification Type:
@@ -10,8 +10,8 @@ Specification Type:
   Generic: _ 
   Replica: _ 
 Source Specification: _ 
-Shared By:            _ Specimins, Requests
-Description:          _ The official, classical, scientific, taxonomical species name
+Shared By:            _ 
+Description:          _ The official, classical, scientific, taxonomical family name
 
 
 PHYSICAL ELEMENTS
@@ -28,16 +28,16 @@ Character Support:
 
 LOGICAL ELEMENTS
 
-Key Type:      Non:        _ 
-               Primary:    _ Yes
-               Foreign:    _ Yes
+Key Type:      Non:        _ Yes
+               Primary:    _ 
+               Foreign:    _ 
                Alternate:  _ 
 
-Key Structure: Simple:     _ Yes
+Key Structure: Simple:     _ 
                Composite:  _ 
 
-Uniqueness:    Non-unique: _ 
-               Unique:     _ Yes
+Uniqueness:    Non-unique: _ Yes
+               Unique:     _ 
 
 Null Support:  Nulls OK:   _ 
                No nulls:   _ Yes
@@ -51,10 +51,11 @@ Required Value:    No:     _
 Range of Values:   _ No domain limitation
 
 Edit Rule:
-  Enter now, edits allowed:       _ 
-  Enter now, edits not allowed:   _ Yes
+  Enter now, edits allowed:       _ Yes
+  Enter now, edits not allowed:   _ 
   Enter later, edits allowed:     _ 
   Enter later, edits not allowed: _ 
   Not determined at this time:    _ 
 
-NOTES: _ 
+NOTES: _ Editable supposing that taxonomists change their minds about what family
+a species belongs to

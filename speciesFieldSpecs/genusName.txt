@@ -36,8 +36,8 @@ Key Type:      Non:        _
 Key Structure: Simple:     _ Yes
                Composite:  _ 
 
-Uniqueness:    Non-unique: _ 
-               Unique:     _ Yes
+Uniqueness:    Non-unique: _ Yes
+               Unique:     _ 
 
 Null Support:  Nulls OK:   _ 
                No nulls:   _ Yes
