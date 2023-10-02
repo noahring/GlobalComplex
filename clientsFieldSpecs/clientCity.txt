@@ -2,33 +2,33 @@ FIELD SPECIFICATIONS
 
 GENERAL ELEMENTS
 
-Field Name:           _ genusName 
-Parent Table:         _ species
+Field Name:           clientCity 
+Parent Table:         Clients 
 Alias(es):            _ 
 Specification Type:
-  Unique:  _ Yes
-  Generic: _ 
+  Unique:  _ 
+  Generic: X 
   Replica: _ 
 Source Specification: _ 
 Shared By:            _ 
-Description:          _ The official, classical, scientific, taxonomical genus name
+Description:          City for the client's address. 
 
 
 PHYSICAL ELEMENTS
 
-Data Type:            _ VAR CHAR
-Length:               _ 20
-Decimal Places:       _  N/A
+Data Type:            varchar 
+Length:               64 
+Decimal Places:       _  
 Character Support:
-  Letters (A-Z):      _ X
+  Letters (A-Z):      X 
   Numbers (0-9):      _ 
   Keyboard (.,/$#%):  _ 
-  Special (©®™Σπ):    _ X
+  Special (©®™Σπ):    _ 
 
 
 LOGICAL ELEMENTS
 
-Key Type:      Non:        _ X
+Key Type:      Non:        X 
                Primary:    _ 
                Foreign:    _ 
                Alternate:  _ 
@@ -36,25 +36,25 @@ Key Type:      Non:        _ X
 Key Structure: Simple:     _ 
                Composite:  _ 
 
-Uniqueness:    Non-unique: _ X
+Uniqueness:    Non-unique: X 
                Unique:     _ 
 
 Null Support:  Nulls OK:   _ 
-               No nulls:   _ X
+               No nulls:   X 
 
 Values Entered By: User:   _ 
-                   System: _ X
+                   System: X 
 
 Required Value:    No:     _ 
-                   Yes:    _ X
+                   Yes:    X 
 
-Range of Values:   _ No domain limitation
+Range of Values:   _ 
 
 Edit Rule:
-  Enter now, edits allowed:       _ X
+  Enter now, edits allowed:       X 
   Enter now, edits not allowed:   _ 
   Enter later, edits allowed:     _ 
   Enter later, edits not allowed: _ 
   Not determined at this time:    _ 
 
-NOTES: _ 
+NOTES: _

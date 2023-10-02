@@ -51,7 +51,7 @@ Required Value:    No:     _
 Range of Values:   _ True or False
 
 Edit Rule:
-  Enter now, edits allowed:       _ Yes
+  Enter now, edits allowed:       _ X
   Enter now, edits not allowed:   _ 
   Enter later, edits allowed:     _ 
   Enter later, edits not allowed: _ 

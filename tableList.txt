@@ -1,0 +1,20 @@
+Tables in the Entomological Database:
+1. species:
+    - Data Table
+    Contains information about a species of arthropod. 
+2. specimens:
+    - Data Table
+    Contains information about an individual animal in the keeping of the Entomological
+    Archive
+3. clients:
+    - Data Table
+    Contains information about people who have made requests of and/or transactions with
+    the Entomological Archive
+4. requests: 
+    - Data Table
+    Contains information about requests to checkout specimens from the archive submitted
+    to the archive
+5. transactions: 
+    -Data Table
+    Contains information about requests that have been approved so that specimens were checked
+    out

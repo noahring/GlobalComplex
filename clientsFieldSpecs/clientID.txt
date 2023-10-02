@@ -2,26 +2,26 @@ FIELD SPECIFICATIONS
 
 GENERAL ELEMENTS
 
-Field Name:           _ X
-Parent Table:         _ Specimen
+Field Name:           clientID 
+Parent Table:         Clients 
 Alias(es):            _ 
 Specification Type:
-  Unique:  _ Yes
+  Unique:  X 
   Generic: _ 
   Replica: _ 
 Source Specification: _ 
-Shared By:            _ Transaction
-Description:          _ Uniquely identifies an individual animal in the archives posession
+Shared By:            Requests 
+Description:          Unique identifier for each client in our database. 
 
 
 PHYSICAL ELEMENTS
 
-Data Type:            _ int
+Data Type:            Int 
 Length:               _ 
-Decimal Places:       _  0
+Decimal Places:       0  
 Character Support:
   Letters (A-Z):      _ 
-  Numbers (0-9):      _ X
+  Numbers (0-9):      X 
   Keyboard (.,/$#%):  _ 
   Special (©®™Σπ):    _ 
 
@@ -29,30 +29,30 @@ Character Support:
 LOGICAL ELEMENTS
 
 Key Type:      Non:        _ 
-               Primary:    _ X
-               Foreign:    _ X
+               Primary:    X 
+               Foreign:    X 
                Alternate:  _ 
 
-Key Structure: Simple:     _ X
+Key Structure: Simple:     X 
                Composite:  _ 
 
 Uniqueness:    Non-unique: _ 
-               Unique:     _ X
+               Unique:     X 
 
 Null Support:  Nulls OK:   _ 
-               No nulls:   _ 
+               No nulls:   X 
 
 Values Entered By: User:   _ 
-                   System: _ X
+                   System: X 
 
 Required Value:    No:     _ 
-                   Yes:    _ X
+                   Yes:    X
 
 Range of Values:   _ 
 
 Edit Rule:
   Enter now, edits allowed:       _ 
-  Enter now, edits not allowed:   _ X
+  Enter now, edits not allowed:   X 
   Enter later, edits allowed:     _ 
   Enter later, edits not allowed: _ 
   Not determined at this time:    _ 
