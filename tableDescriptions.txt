@@ -1,0 +1,27 @@
+1. species
+    a. speciesName (primary key)
+    b. orderName
+    c. familyName
+    d. genusName
+2. specimen
+    a. specimenId (primary key)
+    b. speciesName (foreign key)
+    c. isAlive
+    d. specimenPhotograph
+3. requests
+    a. requestId (primary key)
+    b. clientId (foreign key)
+    c. requestDate
+    d. speciesName (foreign key)
+    e. quantity requested
+4. client
+    a. clientId (primary key)
+    b. client profession
+    c. streetNumber
+    4. streetName
+    5. city
+    6. stateProvinceRegion
+    7. areaCode
+    8. country
+    9. phone
+    10. email
