@@ -14,7 +14,3 @@ Tables in the Entomological Database:
     - Data Table
     Contains information about requests to checkout specimens from the archive submitted
     to the archive
-5. transactions: 
-    -Data Table
-    Contains information about requests that have been approved so that specimens were checked
-    out

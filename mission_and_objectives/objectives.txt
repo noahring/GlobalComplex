@@ -6,5 +6,5 @@
 6. Mantain information about researchers. 
 7. Mantain information about Archive staff.
 
-
+Comments: This is a good set of objectives. You can be a bit more specific about what "checkouts" are--this sounds a bit like a technical term that you mean something specific by.
  
