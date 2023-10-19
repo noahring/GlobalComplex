@@ -1,0 +1,55 @@
+BUSINESS RULE SPECIFICATIONS
+
+RULE INFORMATION
+
+Statement:  _ The same specimen can't be checked out to 2 people at once. 
+
+Constraint: _ The DateOut field of a request cannot be between the DateIn field and DateOut
+                field of another request with the same SpeciminID.
+
+Type:     Database Oriented:     _ X
+          Application Oriented   _ 
+
+Category: Field Specific:        _ 
+          Relationship Specific: _ X
+
+Test On:  Insert:                _ X
+          Delete:                _ 
+          Update:                _
+
+
+STRUCTURES AFFECTED
+
+Field Names: _ DateOut, DateIn, SpecimenID
+
+Table Names: _ Requests
+
+
+FIELD ELEMENTS AFFECTED
+
+Physical Elements: Data Type:           _ 
+                   Length:              _ 
+                   Character Support:   _ 
+
+Logical Elements:  Key Type:            _ 
+                   Key Structure:       _ 
+                   Uniqueness:          _ 
+                   Null Support:        _ 
+                   Values Entered By:   _ 
+                   Range of Values:     _ X
+                   Edit Rule:           _ X
+
+
+RELATIONSHIP CHARACTERISTICS AFFECTED
+
+    Deletion rule:              _
+    Type of participation:      _
+    Degree of participation:    _
+
+    
+ACTION TAKEN
+
+_ Restrict
+
+
+NOTES: _
