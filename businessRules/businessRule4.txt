@@ -1,0 +1,54 @@
+BUSINESS RULE SPECIFICATIONS
+
+RULE INFORMATION
+
+Statement:  A client can be deleted from the database for any reason, but their requests must be deleted from the database. 
+
+Constraint: Delete the requestID that is related to a ClientID that was deleted.
+
+Type:     Database Oriented:     X 
+          Application Oriented   _ 
+
+Category: Field Specific:        X 
+          Relationship Specific: _ 
+
+Test On:  Insert:                _ 
+          Delete:                X 
+          Update:                _
+
+
+STRUCTURES AFFECTED
+
+Field Names: ClientID, RequestID 
+
+Table Names: Clients, Requests
+
+
+FIELD ELEMENTS AFFECTED
+
+Physical Elements: Data Type:           X 
+                   Length:              _ 
+                   Character Support:   _ 
+
+Logical Elements:  Key Type:            _ 
+                   Key Structure:       _ 
+                   Uniqueness:          _ 
+                   Null Support:        _ 
+                   Values Entered By:   _ 
+                   Range of Values:     _ 
+                   Edit Rule:           X 
+
+
+RELATIONSHIP CHARACTERISTICS AFFECTED
+
+    Deletion rule:              X
+    Type of participation:      _
+    Degree of participation:    _
+
+    
+ACTION TAKEN
+
+_ 
+
+
+NOTES: _
