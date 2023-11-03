@@ -8,17 +8,14 @@ CREATE TABLE species (
     genusName    VARCHAR(64),
     speciesName  VARCHAR(64) PRIMARY KEY
 );
-CREATE TABLE specimens (
-    speciesName VARCHAR(64) FOREIGN KEY,
-    specimenId  INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    isAlive     BOOLEAN,
-);
+
 CREATE TABLE specimens (
     speciesName VARCHAR(64) FOREIGN KEY,
     specimenId  INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     isAlive     BOOLEAN,
     photograph  VARCHAR(64)
 );
+
 CREATE TABLE clients (
     clientAddress    VARCHAR(64),
     clientAreaCode   VARCHAR(64),
@@ -29,7 +26,7 @@ CREATE TABLE clients (
     clientPhone      VARCHAR(15),
     clientProfession VARCHAR(64),
     clientState      VARCHAR(64)
-)
+);
 
 CREATE TABLE requests (
     clientID     INT FOREIGN KEY,
@@ -38,4 +35,4 @@ CREATE TABLE requests (
     dateOut      DATE,
     dateIn       DATE,
     requestID    INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-)
+);
