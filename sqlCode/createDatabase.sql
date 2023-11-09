@@ -36,12 +36,12 @@ CREATE TABLE specimens (
 
 INSERT INTO specimens VALUES (
     ('Cincidela sexguttata', '1', '1', '1'),
-    ('Cincidela sexguttata', '1', '1', '1'),
-    ('Cincidela sexguttata', '1', '1', '1'),
-    ('Cincidela sexguttata', '1', '1', '1'),
-    ('Cincidela sexguttata', '1', '1', '1'),
-    ('Cincidela sexguttata', '1', '1', '1'),
-    ('Cincidela sexguttata', '1', '1', '1');
+    ('Cincidela repanda', '2', '1', '1'),
+    ('Cincidela punctulata', '3', '1', '1'),
+    ('Cincidela puritana', '4', '1', '1'),
+    ('Cincidela repanda', '5', '1', '1'),
+    ('Cincidela repanda', '6', '1', '1'),
+    ('Cincidela repanda', '7', '1', '1');
 );
 
 CREATE TABLE clients (
