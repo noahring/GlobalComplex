@@ -34,6 +34,7 @@
 <ul>
     <li><a href="index.php">Home</a></li>
     <li><a href="submitrequest.php">Submit Request</a></li>
+    <li><a href="reviewRequest.php">Review Incoming Requests</a></li>
     <li><a href="about.php">About</a></li>
     <!-- <li><a href="contact.php">Contact</a></li> -->
 </ul>
@@ -42,7 +43,7 @@
     // Check if a page is requested and include its content
     $page = isset($_GET['page']) ? $_GET['page'] : 'index';
 
-    $allowedPages = ['index', 'submitrequest', 'services', 'contact'];
+    $allowedPages = ['index', 'submitrequest', 'reviewRequest', 'services', 'contact'];
 
     // if (in_array($page, $allowedPages)) {
     //     include $page . '.php';
