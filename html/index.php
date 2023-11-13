@@ -3,7 +3,6 @@
 <head>
     <title>Global Complex</title>
     <style>
-        /* Basic CSS for Navbar */
         ul {
             list-style-type: none;
             margin: 0;
@@ -26,6 +25,41 @@
 
         li a:hover {
             background-color: #111;
+        }
+
+        form {
+            margin: 20px;
+        }
+
+        /* Style form elements */
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="street_address"],
+        input[type="city"],
+        textarea {
+            width: 30%;
+            padding: 8px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
@@ -52,5 +86,30 @@
     // }
 ?>
 
+
+<form action="process_request.php" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="street_address">Street Address:</label>
+    <textarea id="street_address" name="street_address" required></textarea>
+
+    <label for="city">City:</label>
+    <input type="city" id="city" name="city" required>
+
+    <label for="state">State:</label>
+    <input type="state" id="state" name="state" required>
+
+    <label for="zip">ZipCode:</label>
+    <input type="zip" id="zip" name="zip" required>
+
+    <input type="submit" value="Submit Request">
+</form>
 </body>
 </html>
