@@ -41,9 +41,9 @@
         input[type="email"],
         input[type="tel"],
         input[type="street_address"],
-        input[type="city"],
+        input[type="specimen_request"]
         textarea {
-            width: 30%;
+            width: 15%;
             padding: 8px;
             margin-bottom: 12px;
             box-sizing: border-box;
@@ -108,6 +108,9 @@
 
     <label for="zip">ZipCode:</label>
     <input type="zip" id="zip" name="zip" required>
+
+    <label for="specimen_request">Request the Specimen: </label>
+    <textarea type="specimen_request" id="specimen_request" name="specimen_request" required></textarea>
 
     <input type="submit" value="Submit Request">
 </form>
