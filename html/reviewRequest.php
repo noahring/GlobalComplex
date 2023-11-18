@@ -4,7 +4,7 @@
          error_reporting(E_ALL);
          ini_set('display_errors', 1);
      
-         $config = parse_ini_file('/home/noahring/mysql.ini');
+         $config = parse_ini_file('home/mysql.ini');
          $conn = new mysqli(
              $config['mysqli.default_host'],
              $config['mysqli.default_user'],

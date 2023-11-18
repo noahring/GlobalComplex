@@ -26,12 +26,12 @@ CREATE TABLE specimens (
     FOREIGN KEY (speciesName) REFERENCES species(speciesName)
 );
 
-INSERT INTO specimens (specimenID, speciesName, isAlive, photograph) VALUES 
-    ('1', 'Cicindela sexguttata', 1, 'photo'),
-    ('2', 'Cicindela repanda', 1, 'photo'),
-    ('3', 'Cicindela punctulata', 1, 'photo'),
-    ('4', 'Cicindela hirticollis', 1, 'photo'),
-    ('5', 'Cicindela puritana', 1, 'photo');
+INSERT INTO specimens (speciesName, isAlive, photograph) VALUES 
+    ('Cicindela sexguttata', 1, 'photo'),
+    ('Cicindela repanda', 1, 'photo'),
+    ('Cicindela punctulata', 1, 'photo'),
+    ('Cicindela hirticollis', 1, 'photo'),
+    ('Cicindela puritana', 1, 'photo');
 
 CREATE TABLE clients (
     clientID         INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -47,32 +47,39 @@ CREATE TABLE clients (
     clientProfession VARCHAR(64)
 );
 
-INSERT INTO clients (clientID, clientFirstName, clientLastName,clientAddress,
+INSERT INTO clients (clientFirstName, clientLastName,clientAddress,
 clientCity, clientAreaCode, clientState, clientCountry, clientEmail, clientPhone, clientProfession) VALUES 
-    ('1', 'John', 'Doe', '1234 Main St', 'Anytown', '12345', 'CA', 'USA', 'jdoe@gmail.com', '123-456-7890', 'Entomologist'),
-    ('2', 'Jane', 'Doe', '1234 Main St', 'Anytown', '12345', 'CA', 'USA', 'jdoe@gmail.com', '123-456-7890', 'Entomologist'),
-    ('3', 'John', 'Doe', '1234 Main St', 'Anytown', '12345', 'CA', 'USA', 'jdoe@gmail.com', '123-456-7890', 'Entomologist'),
-    ('4', 'Jane', 'Doe', '1234 Main St', 'Anytown', '12345', 'CA', 'USA', 'jdoe@gmail.com', '123-456-7890', 'Entomologist'),
-    ('5', 'John', 'Doe', '1234 Main St', 'Anytown', '12345', 'CA', 'USA', 'jdoe@gmail.com', '123-456-7890', 'Entomologist'),
-    ('6', 'Jane', 'Doe', '1234 Main St', 'Anytown', '12345', 'CA', 'USA', 'jdoe@gmail.com', '123-456-7890', 'Entomologist');
+    ('John', 'Doe', '1234 Main St', 'Anytown', '12345', 'CA', 'USA', 'jdoe@gmail.com', '123-456-7890', 'Entomologist'),
+    ('Jane', 'Doe', '1234 Main St', 'Anytown', '12345', 'CA', 'USA', 'jdoe@gmail.com', '123-456-7890', 'Entomologist'),
+    ('John', 'Doe', '1234 Main St', 'Anytown', '12345', 'CA', 'USA', 'jdoe@gmail.com', '123-456-7890', 'Entomologist'),
+    ('Jane', 'Doe', '1234 Main St', 'Anytown', '12345', 'CA', 'USA', 'jdoe@gmail.com', '123-456-7890', 'Entomologist'),
+    ('John', 'Doe', '1234 Main St', 'Anytown', '12345', 'CA', 'USA', 'jdoe@gmail.com', '123-456-7890', 'Entomologist'),
+    ('Jane', 'Doe', '1234 Main St', 'Anytown', '12345', 'CA', 'USA', 'jdoe@gmail.com', '123-456-7890', 'Entomologist');
     
 
 
 CREATE TABLE requests (
     requestID    INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     clientID     INT,
-    specimenID   INT,
+    speciesName  INT,
     requestDate  DATE,
-    dateOut      DATE,
-    dateIn       DATE,
     FOREIGN KEY (clientID) REFERENCES clients(clientID),
-    FOREIGN KEY (specimenID) REFERENCES specimens(specimenID)
+    FOREIGN KEY (speciesName) REFERENCES species(speciesName)
 );
 
-INSERT INTO requests (requestID, clientID, specimenID, requestDate, dateOut, dateIn) VALUES 
-    ('1', '1', '1', '2017-01-01', '2017-01-01', '2017-01-01'),
-    ('2', '2', '2', '2017-01-01', '2017-01-01', '2017-01-01'),
-    ('3', '3', '3', '2017-01-01', '2017-01-01', '2017-01-01'),
-    ('4', '4', '4', '2017-01-01', '2017-01-01', '2017-01-01'),
-    ('5', '5', '5', '2017-01-01', '2017-01-01', '2017-01-01');
+INSERT INTO requests (clientID, speciesName, requestDate) VALUES 
+    ('1', 'Cicindela sexguttata', '2017-01-01'),
+    ('2', 'Cicindela repanda', '2017-01-01'),
+    ('3', 'Cicindela punctulata', '2017-01-01'),
+    ('4', 'Cicindela hirticollis', '2017-01-01'),
+    ('5', 'Cicindela puritana', '2017-01-01');
+
+CREATE TABLE transactions (
+    transactionID    INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    clientID     INT,
+    specimenID  INT,
+    dateOut  DATE,
+    FOREIGN KEY (requestID) REFERENCES requests(requestID),
+    FOREIGN KEY (specimenID) REFERENCES specimen(specimens)
+);
 
