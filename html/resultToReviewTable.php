@@ -54,7 +54,7 @@
             ?>
             </tbody>
             </table>
-            <input type ="submit" value ="Aprove selected Requests" method = POST/>
+            <input type ="submit" value ="Approve selected Requests" method = POST/>
     </form>
         <?php
         return;
