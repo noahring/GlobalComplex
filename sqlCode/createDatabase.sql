@@ -67,7 +67,7 @@ CREATE TABLE requests (
     FOREIGN KEY (speciesName) REFERENCES species(speciesName)
 );
 
-INSERT INTO requests (clientID, speciesName, requestDate) VALUES 
+INSERT INTO requests (clientID, speciesName, requestDate) VALUES
     ('1', 'Cicindela sexguttata', '2017-01-01'),
     ('2', 'Cicindela repanda', '2017-01-01'),
     ('3', 'Cicindela punctulata', '2017-01-01'),
@@ -79,7 +79,6 @@ CREATE TABLE transactions (
     clientID     INT,
     specimenID  INT,
     dateOut  DATE,
-    FOREIGN KEY (requestID) REFERENCES requests(requestID),
-    FOREIGN KEY (specimenID) REFERENCES specimen(specimens)
-);
-
+    FOREIGN KEY (clientID) REFERENCES clients(clientID),
+    FOREIGN KEY (specimenID) REFERENCES specimen(specimenID)
+); 

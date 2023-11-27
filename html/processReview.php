@@ -2,7 +2,13 @@
 with the checkout date set to tomorrow and the specimen id set to the first specimen
 of the desired species -->
 <html>
-    foreach()
-<?phppreparedInsertStatement = ""
+
+<?php
+    $query = "SELECT * FROM requests";
+
+
+    
+    $result = $conn->query($query);
+    var_dump($_POST);
 ?>
 </html>
