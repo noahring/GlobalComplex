@@ -59,26 +59,27 @@ clientCity, clientAreaCode, clientState, clientCountry, clientEmail, clientPhone
 
 
 CREATE TABLE requests (
-    requestID    INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    clientID     INT,
-    speciesName  INT,
-    requestDate  DATE,
+    requestID     INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    clientID      INT,
+    speciesName   VARCHAR(64),
+    requestDate   DATE,
+    requestStatus VARCHAR(64),
     FOREIGN KEY (clientID) REFERENCES clients(clientID),
     FOREIGN KEY (speciesName) REFERENCES species(speciesName)
 );
 
-INSERT INTO requests (clientID, speciesName, requestDate) VALUES
-    ('1', 'Cicindela sexguttata', '2017-01-01'),
-    ('2', 'Cicindela repanda', '2017-01-01'),
-    ('3', 'Cicindela punctulata', '2017-01-01'),
-    ('4', 'Cicindela hirticollis', '2017-01-01'),
-    ('5', 'Cicindela puritana', '2017-01-01');
+INSERT INTO requests (clientID, speciesName, requestDate, requestStatus) VALUES
+    ('1', 'Cicindela sexguttata', '2017-01-01', 'In progress'),
+    ('2', 'Cicindela repanda', '2017-01-01', 'In progress'),
+    ('3', 'Cicindela punctulata', '2017-01-01', 'Completed'),
+    ('4', 'Cicindela hirticollis', '2017-01-01', 'In progress'),
+    ('5', 'Cicindela puritana', '2017-01-01', 'Completed');
 
 CREATE TABLE transactions (
-    transactionID    INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    clientID     INT,
-    specimenID  INT,
-    dateOut  DATE,
+    transactionID  INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    clientID       INT,
+    specimenID     INT,
+    dateOut        DATE,
     FOREIGN KEY (clientID) REFERENCES clients(clientID),
-    FOREIGN KEY (specimenID) REFERENCES specimen(specimenID)
+    FOREIGN KEY (specimenID) REFERENCES specimens(specimenID)
 ); 
