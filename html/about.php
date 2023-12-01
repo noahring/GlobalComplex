@@ -2,28 +2,13 @@
 <html>
 <head>
     <title>About Us</title>
-    <style>
-        /* Basic CSS for photo grid */
-        .contributors {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
-
-        .contributor {
-            text-align: center;
-            margin: 10px;
-        }
-
-        .contributor img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover; /* Helps maintain the aspect ratio */
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="./style/about.style.css">
 </head>
 <body>
+
+<?php
+include 'navbar.php'
+?>
 
 <h1>About Our Project</h1>
 

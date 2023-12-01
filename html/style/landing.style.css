@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ccc
+}
+
+header {
+    background-color: #8c33fc;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+section {
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 1em;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #8c33fc;
+    color: #fff;
+}
+#logo {
+max-width: 200px; /* Adjust the value to your desired width */
+height: auto;
+margin-bottom: 1em;
+}
+
+#loginButton {
+display: block;
+margin: 1em auto;
+padding: 0.5em 1em;
+background-color: #007bff; /* Adjust the color to your preference */
+color: #fff;
+text-decoration: none;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+font-size: 20px;
+
+/* New styles to limit the width */
+max-width: 200px;
+width: 100%;
+box-sizing: border-box;
+}
+#loginButton:hover {
+    background-color: #0056b3; /* Adjust the hover color */
+}
