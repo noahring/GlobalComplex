@@ -50,12 +50,11 @@ CREATE TABLE requests (
 );
 
 
-
 CREATE TABLE transactions (
-    transactionID    INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    clientID     INT,
-    specimenID  INT,
-    dateOut  DATE,
+    transactionID  INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    clientID       INT,
+    specimenID     INT,
+    dateOut        DATE,
     FOREIGN KEY (clientID) REFERENCES clients(clientID),
     FOREIGN KEY (specimenID) REFERENCES specimens(specimenID)
 );
