@@ -6,9 +6,8 @@ CREATE PROCEDURE addRequest(
     new_requestDate DATE
 )
 
-BEGIN;
+BEGIN
 
-    DECLARE new_requestID INT;
 
     INSERT INTO requests (clientID, speciesName, requestDate)
          VALUES (new_clientID, new_speciesName, new_requestDate);
@@ -18,3 +17,5 @@ END;
 //
 
 DELIMITER ;
+
+GRANT EXECUTE ON PROCEDURE bugs.addRequest TO 'webuser'@'localhost';

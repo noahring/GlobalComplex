@@ -3,18 +3,18 @@ DELIMITER //
 CREATE PROCEDURE addTransaction(
     new_clientID    INT,
     new_specimenID  INT,
-    new_DateOut DATE
+    new_dateOut DATE
 )
 
-BEGIN;
-
-    DECLARE new_transactionID INT;
+BEGIN
 
     INSERT INTO transactions (clientID, specimenID, dateOut)
-         VALUES (new_clientID, new_specimenID, new_DateOut);
+         VALUES (new_clientID, new_specimenID, new_dateOut);
 
 END;
 
 //
 
 DELIMITER ;
+
+GRANT EXECUTE ON PROCEDURE bugs.addTransaction TO 'webuser'@'localhost';

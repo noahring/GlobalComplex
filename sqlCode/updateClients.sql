@@ -12,7 +12,7 @@ CREATE PROCEDURE updateClient(
     new_clientState      VARCHAR(64)
 )
 
-BEGIN;
+BEGIN
 
     UPDATE clients
         SET clientAddress    = new_clientAddress,
@@ -30,3 +30,5 @@ END;
 //
 
 DELIMITER ;
+
+GRANT EXECUTE ON PROCEDURE bugs.updateClient TO 'webuser'@'localhost';

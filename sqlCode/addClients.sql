@@ -11,15 +11,31 @@ CREATE PROCEDURE addClient(
     new_clientState      VARCHAR(64)
 )
 
-BEGIN;
+BEGIN
 
-    DECLARE new_clientID INT;
-
-    INSERT INTO clients (clientAddress, clientAreaCode, clientCity, clientCountry, clientEmail, clientPhone, clientProfession, clientState)
-         VALUES (new_clientAddress, new_clientAreaCode, new_clientCity, new_clientCountry, new_clientEmail, new_clientPhone, new_clientProfession, new_clientState);
+    INSERT INTO clients (
+        clientAddress, 
+        clientAreaCode, 
+        clientCity, 
+        clientCountry, 
+        clientEmail, 
+        clientPhone, 
+        clientProfession, 
+        clientState)
+    VALUES (
+            new_clientAddress, 
+            new_clientAreaCode, 
+            new_clientCity, 
+            new_clientCountry, 
+            new_clientEmail, 
+            new_clientPhone, 
+            new_clientProfession, 
+            new_clientState);
 
 END;
 
 //
 
 DELIMITER ;
+
+GRANT EXECUTE ON PROCEDURE bugs.addClient TO 'webuser'@'localhost';

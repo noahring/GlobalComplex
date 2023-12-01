@@ -25,7 +25,7 @@
             <?php
         }
         ?>
-            <th>Delete?</th>
+            <th>    </th>
                 </tr>
             </thead>
             <tbody>
@@ -41,10 +41,10 @@
                     }
                     //var_dump($data);
                     $id = $data[$j][0];
-                    ?>
+                    ?>  
                     <td>
                         <input type="checkbox"
-                            name="checkbox<?php echo $id; ?>"
+                            name="<?php echo $id; ?>"
                             value=<?php echo $id; ?>
                             />
                     </td> 

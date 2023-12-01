@@ -90,3 +90,14 @@ clientCity, clientAreaCode, clientState, clientCountry, clientEmail, clientPhone
      ('3', 'Cicindela punctulata', '2017-01-01'),
      ('4', 'Cicindela hirticollis', '2017-01-01'),
      ('5', 'Cicindela puritana', '2017-01-01');
+
+SOURCE addClients.sql
+SOURCE addRequest.sql
+SOURCE addSpecimen.sql
+SOURCE addTransaction.sql
+SOURCE convertRequest.sql
+SOURCE deleteClient.sql
+SOURCE deleteRequest.sql
+SOURCE deleteSpecimen.sql
+SOURCE functions.sql 
+SOURCE updateClients.sql
