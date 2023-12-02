@@ -4,8 +4,7 @@
          error_reporting(E_ALL);
          ini_set('display_errors', 1);
      
-        //  $config = parse_ini_file('home/mysql.ini');
-        $config = parse_ini_file('/home/' . get_current_user() . '/mysqli.ini');
+         $config = parse_ini_file('home/mysql.ini');
          $conn = new mysqli(
              $config['mysqli.default_host'],
              $config['mysqli.default_user'],
@@ -18,9 +17,12 @@
      
          $conn->select_db('bugs');
      
-         $query = "SELECT * FROM requests";
+         $query = "SELECT requestID, speciesName FROM requests;";
+         
          $result = $conn->query($query);
+         //var_dump($result);
+         //echo "reached";
      
-         resultToReviewTable($request);
+         resultToHTMLTable($result);
     ?>
 </html>

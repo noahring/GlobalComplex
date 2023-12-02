@@ -85,6 +85,6 @@ if (isset($_GET['code'])) {
         echo "Error: Access token not found.";
     }
 } else {
-    echo "<a href='" . $client->createAuthUrl() . "' id='loginButton'>Login</a>";
+    echo "<a href='" . $client->createAuthUrl() . "' id='loginButton'></a>";
 }
 ?>

@@ -9,13 +9,7 @@ CREATE TABLE species (
     speciesName  VARCHAR(64) PRIMARY KEY
 );
 
-INSERT INTO species (orderName, familyName, genusName, speciesName)
-VALUES  ('Coleoptera', 'Carabidae', 'Cicindela', 'Cicindela sexguttata'),
-        ('Coleoptera', 'Carabidae', 'Cicindela', 'Cicindela repanda'),
-        ('Coleoptera', 'Carabidae', 'Cicindela', 'Cicindela punctulata'),
-        ('Coleoptera', 'Carabidae', 'Cicindela', 'Cicindela hirticollis'),
-        ('Coleoptera', 'Carabidae', 'Cicindela', 'Cicindela puritana'),
-        ('Coleoptera', 'Carabidae', 'Cicindela', 'Cicindela scutellaris');
+
 
 
 CREATE TABLE specimens (
@@ -26,12 +20,7 @@ CREATE TABLE specimens (
     FOREIGN KEY (speciesName) REFERENCES species(speciesName)
 );
 
-INSERT INTO specimens (speciesName, isAlive, photograph) VALUES 
-    ('Cicindela sexguttata', 1, 'photo'),
-    ('Cicindela repanda', 1, 'photo'),
-    ('Cicindela punctulata', 1, 'photo'),
-    ('Cicindela hirticollis', 1, 'photo'),
-    ('Cicindela puritana', 1, 'photo');
+
 
 CREATE TABLE clients (
     clientID         INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -47,6 +36,44 @@ CREATE TABLE clients (
     clientProfession VARCHAR(64)
 );
 
+
+    
+
+
+CREATE TABLE requests (
+    requestID    INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    clientID     INT,
+    speciesName  VARCHAR(64),
+    requestDate  DATE,
+    FOREIGN KEY (clientID) REFERENCES clients(clientID),
+    FOREIGN KEY (speciesName) REFERENCES species(speciesName)
+);
+
+
+CREATE TABLE transactions (
+    transactionID  INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    clientID       INT,
+    specimenID     INT,
+    dateOut        DATE,
+    FOREIGN KEY (clientID) REFERENCES clients(clientID),
+    FOREIGN KEY (specimenID) REFERENCES specimens(specimenID)
+);
+
+INSERT INTO species (orderName, familyName, genusName, speciesName)
+VALUES  ('Coleoptera', 'Carabidae', 'Cicindela', 'Cicindela sexguttata'),
+        ('Coleoptera', 'Carabidae', 'Cicindela', 'Cicindela repanda'),
+        ('Coleoptera', 'Carabidae', 'Cicindela', 'Cicindela punctulata'),
+        ('Coleoptera', 'Carabidae', 'Cicindela', 'Cicindela hirticollis'),
+        ('Coleoptera', 'Carabidae', 'Cicindela', 'Cicindela puritana'),
+        ('Coleoptera', 'Carabidae', 'Cicindela', 'Cicindela scutellaris');
+
+INSERT INTO specimens (speciesName, isAlive, photograph) VALUES 
+    ('Cicindela sexguttata', 1, 'photo'),
+    ('Cicindela repanda', 1, 'photo'),
+    ('Cicindela punctulata', 1, 'photo'),
+    ('Cicindela hirticollis', 1, 'photo'),
+    ('Cicindela puritana', 1, 'photo');
+
 INSERT INTO clients (clientFirstName, clientLastName,clientAddress,
 clientCity, clientAreaCode, clientState, clientCountry, clientEmail, clientPhone, clientProfession) VALUES 
     ('John', 'Doe', '1234 Main St', 'Anytown', '12345', 'CA', 'USA', 'jdoe@gmail.com', '123-456-7890', 'Entomologist'),
@@ -55,31 +82,21 @@ clientCity, clientAreaCode, clientState, clientCountry, clientEmail, clientPhone
     ('Jane', 'Doe', '1234 Main St', 'Anytown', '12345', 'CA', 'USA', 'jdoe@gmail.com', '123-456-7890', 'Entomologist'),
     ('John', 'Doe', '1234 Main St', 'Anytown', '12345', 'CA', 'USA', 'jdoe@gmail.com', '123-456-7890', 'Entomologist'),
     ('Jane', 'Doe', '1234 Main St', 'Anytown', '12345', 'CA', 'USA', 'jdoe@gmail.com', '123-456-7890', 'Entomologist');
-    
 
+ INSERT INTO requests (clientID, speciesName, requestDate) VALUES
+     ('1', 'Cicindela sexguttata', '2017-01-01'),
+     ('2', 'Cicindela repanda', '2017-01-01'),
+     ('3', 'Cicindela punctulata', '2017-01-01'),
+     ('4', 'Cicindela hirticollis', '2017-01-01'),
+     ('5', 'Cicindela puritana', '2017-01-01');
 
-CREATE TABLE requests (
-    requestID    INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    clientID     INT,
-    speciesName  INT,
-    requestDate  DATE,
-    FOREIGN KEY (clientID) REFERENCES clients(clientID),
-    FOREIGN KEY (speciesName) REFERENCES species(speciesName)
-);
-
-INSERT INTO requests (clientID, speciesName, requestDate) VALUES 
-    ('1', 'Cicindela sexguttata', '2017-01-01'),
-    ('2', 'Cicindela repanda', '2017-01-01'),
-    ('3', 'Cicindela punctulata', '2017-01-01'),
-    ('4', 'Cicindela hirticollis', '2017-01-01'),
-    ('5', 'Cicindela puritana', '2017-01-01');
-
-CREATE TABLE transactions (
-    transactionID    INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    clientID     INT,
-    specimenID  INT,
-    dateOut  DATE,
-    FOREIGN KEY (requestID) REFERENCES requests(requestID),
-    FOREIGN KEY (specimenID) REFERENCES specimen(specimens)
-);
-
+SOURCE addClients.sql
+SOURCE addRequest.sql
+SOURCE addSpecimen.sql
+SOURCE addTransaction.sql
+SOURCE convertRequest.sql
+SOURCE deleteClient.sql
+SOURCE deleteRequest.sql
+SOURCE deleteSpecimen.sql
+SOURCE functions.sql 
+SOURCE updateClients.sql
