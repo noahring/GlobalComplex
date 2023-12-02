@@ -8,17 +8,19 @@ BEGIN
     DECLARE requestClientID INT;
     DECLARE outSpecimenID INT;
 
-    SET inSpeciesName = SELECT speciesName FROM requests
-        WHERE request.requestID = inRequestID;
+    SET inSpeciesName = (SELECT speciesName FROM requests
+        WHERE requests.requestID = inRequestID);
         
     
-    SET requestClientID = SELECT clientID FROM requests
-        WHERE request.requestID = inRequestID;
+    SET requestClientID = (SELECT clientID FROM requests
+        WHERE requests.requestID = inRequestID);
     
 
-    SET outSpecimenID = EXEC getFirstSpecimen inSpeciesName;
+    SET outSpecimenID = getFirstSpecimen (inSpeciesName);
 
-    EXEC addTransaction new_clientID = requestClientID, newSpecimenID = outSpecimenID, new_dateOut = NULL 
+    CALL addTransaction (requestClientID, outSpecimenID, NULL);
+
+    CALL deleteRequest(inRequestID);
 END;
 
 //

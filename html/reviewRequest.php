@@ -18,7 +18,7 @@
      
          $conn->select_db('bugs');
      
-         $query = "SELECT requestID, speciesName FROM requests;";
+         $query = "SELECT requestID, speciesName FROM requests WHERE requests.requestID;";
          
          $result = $conn->query($query);
          //var_dump($result);

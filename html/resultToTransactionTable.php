@@ -25,7 +25,7 @@
             <?php
         }
         ?>
-            <th></th>
+            <th>Sent</th>
                 </tr>
             </thead>
             <tbody>
@@ -44,8 +44,7 @@
                     ?>  
                     <td>
                         <input type="checkbox"
-                            name="<?php echo $id; ?>"
-                            value=<?php echo $id; ?>
+                            name="send<?php echo $id; ?>"
                             />
                     </td> 
                 </tr>   
@@ -54,7 +53,7 @@
             ?>
             </tbody>
             </table>
-            <input type ="submit" value ="Approve selected Requests" method = POST/>
+            <input type ="submit" value ="Confirm Sent" method = POST/>
     </form>
         <?php
         return;
