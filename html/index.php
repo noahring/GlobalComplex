@@ -133,7 +133,7 @@ a:hover {
 if (isset($_SESSION['user_email'])) {
     $user_email = $_SESSION['user_email'];
     $user_name = $_SESSION['user_name'];
-    echo "Welcome back, $user_name! (Email: $user_email)";
+    echo "Welcome, $user_name! (Email: $user_email)";
     // Continue with the rest of your index.php code
 } else {
     // The user is not logged in, display the login link or redirect to the login page
@@ -142,17 +142,46 @@ if (isset($_SESSION['user_email'])) {
 ?>
 
 <div class="container">
+<h2>Available Species</h2>
+    <table>
+        <thead>
+            <tr>
+                <?php foreach ($fields as $index => $field): ?>
+                    <th data-index="<?= $index ?>"><?php echo $field->name; ?></th>
+                <?php endforeach; ?>
+            </tr>
+        </thead>
+
+        <tbody>
+            <?php foreach ($result_body as $row): ?>
+                <tr>
+                    <?php foreach ($row as $cell): ?>
+                        <td><?php echo $cell; ?></td>
+                    <?php endforeach; ?>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table><br>
+
+    <form action="" method="get">
+        <label for="search">Search:</label>
+        <input type="text" id="search" name="search" placeholder="Enter species name">
+        <input type="submit" value="Search">
+    </form>
+    <br>
+    <br>
+
     <h1>Species Request Form</h1>
 
         <form action="process_request.php" method="post">
-        <label for="name">First Name:</label>
-        <input type="text" id="fname" name="fname" required>
+        <!-- <label for="name">First Name:</label>
+        <input type="text" id="fname" name="fname" required> -->
         
-        <label for="name">Last Name:</label>
-        <input type="text" id="lname" name="lname" required>
+        <!-- <label for="name">Last Name:</label>
+        <input type="text" id="lname" name="lname" required> -->
 
         <label for="email">Email:</label>
-        <input type="text" id="email" name="email" value="<?php echo htmlspecialchars($user_email); ?>" readonly> <!-- Prepopulated and read-only -->
+        <input type="text" id="email" name="email" value="<?php echo htmlspecialchars($user_email); ?>" readonly>
 
 
         <label for="phone">Phone Number:</label>
@@ -185,32 +214,7 @@ if (isset($_SESSION['user_email'])) {
         </div>
     </form>
 
-    <form action="" method="get">
-        <label for="search">Search:</label>
-        <input type="text" id="search" name="search" placeholder="Enter species name">
-        <input type="submit" value="Search">
-    </form>
-
-    <h2>Available Species</h2>
-    <table>
-        <thead>
-            <tr>
-                <?php foreach ($fields as $index => $field): ?>
-                    <th data-index="<?= $index ?>"><?php echo $field->name; ?></th>
-                <?php endforeach; ?>
-            </tr>
-        </thead>
-
-        <tbody>
-            <?php foreach ($result_body as $row): ?>
-                <tr>
-                    <?php foreach ($row as $cell): ?>
-                        <td><?php echo $cell; ?></td>
-                    <?php endforeach; ?>
-                </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
+    
 </div>
 
 </body>

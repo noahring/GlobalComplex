@@ -43,9 +43,9 @@ if (isset($_GET['code'])) {
             exit();
         }
 
-        $conn->select_db('users');
+        $conn->select_db('bugs');
         // Check if the user already exists in the database using a prepared statement
-        $checkUserQuery = "SELECT * FROM _users WHERE email = ?";
+        $checkUserQuery = "SELECT * FROM clients WHERE clientEmail = ?";
         $stmt = $conn->prepare($checkUserQuery);
         $stmt->bind_param("s", $email);
         $stmt->execute();
@@ -53,7 +53,7 @@ if (isset($_GET['code'])) {
 
         if ($result->num_rows == 0) {
             // User doesn't exist, insert into the database using a prepared statement
-            $insertUserQuery = "INSERT INTO _users (name, email) VALUES (?, ?)";
+            $insertUserQuery = "INSERT INTO clients (clientName, clientEmail) VALUES (?, ?)";
             $stmt = $conn->prepare($insertUserQuery);
             if ($stmt === false) {
                 die("Error preparing statement: " . $conn->error);

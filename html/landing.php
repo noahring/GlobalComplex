@@ -26,11 +26,13 @@
         </ul>
 
     </section>
+
+
     <?php
     require_once './vendor/autoload.php';
-    // echo "<a href='".$client->createAuthUrl()."'>Google Login</a>";
-    // require 'redirect.php'
-    require 'redirect.php'
+    require 'redirect.php';
+    echo "<a href='" . $client->createAuthUrl() . "' id='loginButton'>Login</a>";
+    echo "<a href='" . $client->createAuthUrl() . "' id='loginButton'>Admin Login</a>";
     ?>
 
     <footer>

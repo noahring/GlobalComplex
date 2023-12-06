@@ -9,7 +9,7 @@
 <ul class="navbar">
     <!-- <li><img src="./img/logo.png" alt="Logo"></li> -->
     <li><a href="index.php">Home</a></li>
-    <li><a href="submitrequest.php">Submit Request</a></li>
+    <li><a href="myrequest.php">My Request</a></li>
     <li><a href="reviewRequest.php">Review Incoming Requests</a></li>
     <li><a href="about.php">About</a></li>
     <li><a href="logout.php">Logout</a></li>

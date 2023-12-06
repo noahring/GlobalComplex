@@ -22,31 +22,27 @@ CREATE TABLE specimens (
 
 
 
-CREATE TABLE clients (
-    clientID         INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    clientFirstName  VARCHAR(64),
-    clientLastName   VARCHAR(64),
-    clientAddress    VARCHAR(64),
-    clientCity       VARCHAR(64),
-    clientAreaCode   VARCHAR(64),
-    clientState      VARCHAR(64),
-    clientCountry    VARCHAR(64),
-    clientEmail      VARCHAR(64),
-    clientPhone      VARCHAR(15),
-    clientProfession VARCHAR(64)
+CREATE TABLE IF NOT EXISTS clients(
+    clientID        INT AUTO_INCREMENT PRIMARY KEY,
+    clientName            VARCHAR(255) NOT NULL, 
+    clientEmail           VARCHAR(255) NOT NULL
 );
 
 
-    
 
 
 CREATE TABLE requests (
-    requestID    INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    clientID     INT,
-    speciesName  VARCHAR(64),
-    requestDate  DATE,
-    FOREIGN KEY (clientID) REFERENCES clients(clientID),
-    FOREIGN KEY (speciesName) REFERENCES species(speciesName)
+    requestID                   INT AUTO_INCREMENT PRIMARY KEY,
+    clientID                    INT,  
+    requestPhone                VARCHAR(15) NOT NULL,
+    requestAddress              TEXT NOT NULL,
+    requestCity                 VARCHAR(255) NOT NULL,
+    requestState                VARCHAR(255) NOT NULL,
+    requestZip                  VARCHAR(10) NOT NULL,
+    speciesName                 VARCHAR(64) NOT NULL,
+    requestCreated_at           TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (speciesName) REFERENCES species(speciesName),
+    FOREIGN KEY (clientID) REFERENCES clients(clientID)
 );
 
 

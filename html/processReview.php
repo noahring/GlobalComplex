@@ -4,10 +4,13 @@ of the desired species -->
 <html>
 
 <?php
+    session_start();
+    include('navbar.php');
      error_reporting(E_ALL);
      ini_set('display_errors', 1);
  
      include('resultToTransactionTable.php');
+     include('resultToPlainTable.php');
      $config = parse_ini_file('/home/'.get_current_user().'/mysqli.ini');
      $conn = new mysqli(
          $config['mysqli.default_host'],
@@ -29,13 +32,13 @@ of the desired species -->
     }
 
     //show the table
-    $query = "SELECT transactionID, clientFirstName, clientLastName, speciesName
+    $query = "SELECT transactionID, clientName, speciesName
                     FROM transactions 
-                     INNER JOIN clients
+                     LEFT OUTER JOIN clients
                         ON transactions.clientID = clients.clientID
-                     INNER JOIN specimens 
+                      INNER JOIN specimens 
                         ON specimens.specimenID = transactions.specimenID
-                     WHERE transactions.dateOut IS NULL;";
+                     WHERE transactions.dateOut IS NULL";
     $result = $conn->query($query);
     $numRows = $result->num_rows;
     $data = $result->fetch_all();
@@ -50,7 +53,7 @@ of the desired species -->
          //Svar_dump($_POST);
          foreach($_POST as $key => $value){
             if($key=="send".$id){
-                echo "reached";
+                //echo "reached";
                 $preparedUpdateStatement = "UPDATE transactions
                                                SET dateOut = (FROM_UNIXTIME({$unixtime}))
                                              WHERE transactionID =(?)";
@@ -60,19 +63,26 @@ of the desired species -->
             }
         }
     }
-    ?><h1>Unsent Transactions<h2>
-    <?php
-    resultToHTMLTable($result);
+    ?>
+    <link rel="stylesheet" type="text/css" href="./style/processReview.style.css">
+    <h1>Unsent Transactions<h2>
 
-    $query = "SELECT transactionID, clientFirstName, clientLastName, speciesName, dateOut
-                    FROM transactions 
-                     INNER JOIN clients
-                        ON transactions.clientID = clients.clientID
-                     INNER JOIN specimens 
-                        ON specimens.specimenID = transactions.specimenID
-                     WHERE transactions.dateOut IS NOT NULL;";
+    <?php
     $result = $conn->query($query);
     resultToHTMLTable($result);
+
+    $query = "SELECT transactionID, clientName, speciesName, dateOut
+                    FROM transactions 
+                     LEFT OUTER JOIN clients
+                        ON transactions.clientID = clients.clientID
+                     LEFT OUTER JOIN specimens 
+                        ON specimens.specimenID = transactions.specimenID
+                     WHERE transactions.dateOut IS NOT NULL;";
+    ?><br>
+    <h1>Sent Transactions</h1>
+    <?php
+    $result = $conn->query($query);
+    resultToPlainHTMLTable($result);
 
     
 ?>

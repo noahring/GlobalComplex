@@ -4,7 +4,7 @@
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
 
-    function resultToHTMLTable($result){
+    function resultToPlainHTMLTable($result){
         $data = $result->fetch_all();
         $numRows = $result->num_rows;
         //echo $numRows;
@@ -12,7 +12,6 @@
         //echo $numColumns;
         $columnNames = $result->fetch_fields();
         ?>
-        <form action = "processReview.php" method=POST>
             <table>
             <thead>
                 <tr>
@@ -42,21 +41,16 @@
                     //var_dump($data);
                     $id = $data[$j][0];
                     ?>  
-                    <td>
-                        <input type="checkbox"
-                            name="<?php echo $id; ?>"
-                            value=<?php echo $id; ?>
-                            />
-                    </td> 
+                    
                 </tr>   
             <?php
         }
             ?>
             </tbody>
             </table>
-            <input type ="submit" onClick="window.location.reload()" value ="Approve selected Requests" method = POST/>
+            
 
-    </form>
+    
         <?php
         return;
     }
