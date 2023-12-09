@@ -43,7 +43,7 @@ The project structure is organized as follows:
 
 1. Clone the repository to your local machine.
    ```bash
-   git clone https://github.com/your-username/entomological-archive.git
+   git clone https://github.com/noahring/GlobalComplex.git
 # Setting Up LAMP Stack
 
 ## Deployment Steps
